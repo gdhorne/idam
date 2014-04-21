@@ -30,8 +30,8 @@
 #
 # Output Definition
 #
-# Format: givenname		sn	uid		password	group
-#	      John Albert	Doe	012345678	A0123456	internal
+# Format: 	givenname	sn	uid		password	group
+#		John Albert	Doe	012345678	A0123456	internal
 #                                                                       external
 #
 # Password Generation Rules:
@@ -210,8 +210,8 @@ sub processRecord {
 ################################################################################
 
 if ($#ARGV + 1 < 4) {
-	print("\nUsage: ga_bulk_load.pl ga_users_input_file ga_users_output_file ga_auth_output_file ga_roles_output_file");
-	exit(1);
+    print("\nUsage: ga_bulk_load.pl ga_users_input_file ga_users_output_file ga_auth_output_file ga_roles_output_file");
+    exit(1);
 }
 
 processRecord;
