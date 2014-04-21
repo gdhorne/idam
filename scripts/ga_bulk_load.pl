@@ -111,7 +111,7 @@ sub generate_ga_password {
 #   uid			UNIX user id
 #   role		role designator
 #   group		group designator
-#   group_name	group name
+#   group_name		group name
 ################################################################################
 
 sub processRecord {
@@ -210,7 +210,7 @@ sub processRecord {
 ################################################################################
 
 if ($#ARGV + 1 < 4) {
-	print("\nUsage: ga_bulk_load.pl ga_users_input_file ga_users_output_file ga_auth_output_file ga_roles_output_file\n\n";
+	print("\nUsage: ga_bulk_load.pl ga_users_input_file ga_users_output_file ga_auth_output_file ga_roles_output_file");
 	exit(1);
 }
 
