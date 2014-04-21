@@ -46,7 +46,7 @@ do
 			-h ${ldap_host} \
 			-p ${ldap_port}\
 			-b ${ldap_base} \
-			-s ${ldap_scope} employeetype="${exployee_type}" \
+			-s ${ldap_scope} employeetype="${employee_type}" \
 		| grep uid= | grep -c -v ${domain})
 	echo -n -e "\t"
 	echo ${employee_type}
