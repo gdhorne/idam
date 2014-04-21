@@ -95,12 +95,12 @@ sub generate_ga_password {
 #
 # Users: Tab-delimited record - one per user
 #
-#   Field       Meaning
-#   -----       -------
-#   givenname   givenname
-#   sn          surname
-#   uid         UNIX user id
-#   password    unique 8-character default password
+#   Field       	Meaning
+#   -----       	-------
+#   givenname   	givenname
+#   sn          	surname
+#   uid         	UNIX user id
+#   password    	unique 8-character default password
 #
 # Authentication: LDIF-formatted entry for each user
 #
