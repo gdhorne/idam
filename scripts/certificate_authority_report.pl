@@ -129,7 +129,7 @@ sub process_persons()
 				} else {
 					my ($cn, $dummy) = split(',ou=', $entry->dn(), 2);
 					my ($sn, $dummy) = split(',', $cn, 2);
-					print(FILE_LOG ",".$sn.",".$ed_entry->get_value('rcmpdiv'));
+					print(FILE_LOG ",".$sn.",".$ed_entry->get_value('division'));
 				}
 			}
 		}
