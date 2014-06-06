@@ -4,7 +4,7 @@
 # Script Name: contacts.sh
 #
 # Description: Adds the telephone number from the Enterprise Directory to each
-#			   record contained in a comma-separated-values (CSV) format file.
+#	       record contained in a comma-separated-values (CSV) format file.
 #
 # Usage: contacts.sh
 

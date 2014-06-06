@@ -5,7 +5,7 @@
 # Script Name: contacts.pl
 #
 # Description: Adds the telephone number from the Enterprise Directory to each
-#			   record contained in a comma-separated-values (CSV) format file.
+#	       record contained in a comma-separated-values (CSV) format file.
 #
 # Usage:
 #   contacts.pl configuration_file data_file_input data_file_output
@@ -26,15 +26,15 @@ use Net::LDAP::Search;
 ################################################################################
 # Function: Read the configuration parameters necessary to access the directory.
 #           The parameters may appear in any order within the configuration file
-#			provided that the following syntax is used.
+#	    provided that the following syntax is used.
 #
 #           Syntax:
 #
 #              attribute:value
 #
 #           where 'attribute' is taken from the set of possible values in the
-#			list: base, host, password, port, scope, user for the Enterprise
-#			Directory.
+#	    list: base, host, password, port, scope, user for the Enterprise
+#	    Directory.
 ################################################################################
 
 sub read_configuration()

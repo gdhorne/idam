@@ -5,11 +5,11 @@
 # Script Name: enterprise_directory_cleanup.pl
 #
 # Description: Sets the attribute 'pkiuserrequired' to 'Yes' for each 
-#			   Enterprise Directory entry with a valid HRMIS ID in the PKI
-#			   Directory and objectclass 'pkiuser' keyed on attribute 'uid'.
+#	       Enterprise Directory entry with a valid HRMIS ID in the PKI
+#	       Directory and objectclass 'pkiuser' keyed on attribute 'uid'.
 #              Sets the attribute 'garequireduser' to 'Yes' for each Enterprise
-#			   Directory entry with a valid HRMIS ID in the GAR Directory keyed
-#			   on attribute 'uid'.
+#	       Directory entry with a valid HRMIS ID in the GAR Directory keyed
+#	       on attribute 'uid'.
 #
 # Usage: enterprise_directory_cleanup.pl configuration_file
 #
@@ -29,15 +29,15 @@ use Net::LDAP::Search;
 ################################################################################
 # Function: Read the configuration parameters necessary to access the directory.
 #           The parameters may appear in any order within the configuration file
-#			provided that the following syntax is used.
+#	    provided that the following syntax is used.
 #
 #           Syntax:
 #
 #              attribute:value
 #
 #           where 'attribute' is taken from the set of possible values in the
-#			list: base, host, password, port, scope, user for the PKI Directory;
-#			the Enterprise Directory, and the Web Access Directory.
+#	    list: base, host, password, port, scope, user for the PKI Directory;
+#	    the Enterprise Directory, and the Web Access Directory.
 ################################################################################
 
 sub read_configuration()
@@ -63,8 +63,8 @@ sub read_configuration()
 
 ################################################################################
 # Function: Add the attribute 'rcmppkiuserrequired' and set the value to 'Yes'
-#			for each Enterprise Directory entry having a corresponding PKI
-#			Directory entry with objectclass 'pkiuser' keyed on attribute 'uid'.
+#	    for each Enterprise Directory entry having a corresponding PKI
+#	    Directory entry with objectclass 'pkiuser' keyed on attribute 'uid'.
 ################################################################################
 
 sub synchronise_with_pki()
@@ -95,7 +95,7 @@ sub synchronise_with_pki()
 				foreach $item ($ed_transaction->entries) {
 					if (!$ed_transaction->is_error()) {
 						print(FILE_LOG "\n".$item->get_value('uid'));
-						$ed_transaction = $ed_server->modify($item->dn(), add => {'rcmppkiuserrequired' => 'Yes'});
+						$ed_transaction = $ed_server->modify($item->dn(), add => {'pkiuserrequired' => 'Yes'});
 						if (!$ed_transaction->is_error()) {
 							print(FILE_LOG " Updated\n")
 							$count++;
@@ -124,8 +124,8 @@ sub synchronise_with_pki()
 
 ################################################################################
 # Function: Add the attribute 'pkiuserrequired' and set the value to 'Yes' for
-#			each Enterprise Directory entry having a corresponding Web Access
-#			Directory entry keyed on attribute 'uid'.
+#	    each Enterprise Directory entry having a corresponding Web Access
+#	    Directory entry keyed on attribute 'uid'.
 ################################################################################
 
 sub synchronise_with_wa()
@@ -185,7 +185,7 @@ sub synchronise_with_wa()
 
 ################################################################################
 # Function: Add the attribute 'pkiuserrequired' and set the value to 'Yes'
-#			for each Enterprise Directory entry of employee type Executive.
+#           for each Enterprise Directory entry of employee type Executive.
 ################################################################################
 
 sub force_ed_update()

@@ -25,16 +25,16 @@ use Net::LDAP::Search;
 ################################################################################
 # Function: Read the configuration parameters necessary to access the directory.
 #           The parameters may appear in any order within the configuration file
-#			provided that the following syntax is used.
+#	    provided that the following syntax is used.
 #
 #           Syntax:
 #
 #              attribute:value
 #
 #           where 'attribute' is taken from the set of possible values in the
-#			list: base, host, password, port, scope, user for the PKI Directory;
-#			and where 'attribute' is taken from the set of possible values in the
-#			list: base, host, port, scope for the Enterprise Directory.
+#	    list: base, host, password, port, scope, user for the PKI Directory;
+#	    and where 'attribute' is taken from the set of possible values in the
+#	    list: base, host, port, scope for the Enterprise Directory.
 ################################################################################
 
 sub read_configuration()
@@ -61,8 +61,8 @@ sub read_configuration()
 
 ################################################################################
 # Function: Read the contents of the comma-separated values data file provided
-#			by the Certificate Authority. This file contains the PKI DN and
-#			state of each entry in the PKI Directory.
+#	    by the Certificate Authority. This file contains the PKI DN and
+#	    state of each entry in the PKI Directory.
 #
 #           Syntax:
 #
@@ -263,7 +263,7 @@ sub process_roles()
 
 ################################################################################
 # Function: Gathers selected data about persons, devices, and roles contained in
-#			the PKI Directory.
+#	    the PKI Directory.
 ################################################################################
 
 sub process()

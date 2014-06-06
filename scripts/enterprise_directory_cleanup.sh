@@ -5,11 +5,11 @@
 # Script Name: enterprise_directory_cleanup.sh
 #
 # Description: Sets the attribute 'pkiuserrequired' to 'Yes' for each 
-#			   Enterprise Directory entry with a valid HRMIS ID in the PKI
-#			   Directory and objectclass 'pkiuser' keyed on attribute 'uid'.
+#	       Enterprise Directory entry with a valid HRMIS ID in the PKI
+#	       Directory and objectclass 'pkiuser' keyed on attribute 'uid'.
 #              Sets the attribute 'garequireduser' to 'Yes' for each Enterprise
-#			   Directory entry with a valid HRMIS ID in the GAR Directory keyed
-#			   on attribute 'uid'.
+#	       Directory entry with a valid HRMIS ID in the GAR Directory keyed
+#	       on attribute 'uid'.
 #
 # Usage: enterprise_directory_cleanup.sh
 #

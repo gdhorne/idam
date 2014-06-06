@@ -6,7 +6,7 @@
 #
 # Description: Produces a report for the Certificate Authority breaking down the
 #              entries in the PKI Directory into the categories of person,
-#			   device, or role.
+#	       device, or role.
 #
 # Usage: certificate_authority_report.sh
 #
